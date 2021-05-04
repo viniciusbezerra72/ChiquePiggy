@@ -1,0 +1,7 @@
+USE CHIQUEPIGGY
+
+DECLARE @ID_CLIENTE INT = 1
+
+SELECT FORMAT(H.dataDaTransacao,'dd/MM/yyyy') as date FROM HISTORICO H
+WHERE H.idCliente = @ID_CLIENTE
+GROUP BY H.dataDaTransacao
